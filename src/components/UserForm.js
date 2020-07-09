@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import UserDetailsForm from './UserDetailsForm';
 import UserPersonalDetails from './UserPersonalDetails';
 import Confirm from './Confirm';
+import Success from './Success';
 
 export class UserForm extends Component {
   state = {
@@ -10,9 +11,9 @@ export class UserForm extends Component {
     firstName: '',
     lastName: '',
     email: '',
-    occupation: 'occ',
-    city: 'city',
-    bio: 'bio',
+    occupation: '',
+    city: '',
+    bio: '',
   };
 
   handleChange = (input) => (e) => {
@@ -59,7 +60,7 @@ export class UserForm extends Component {
           />
         );
       case 4:
-        return <div>success</div>;
+        return <Success />;
     }
   }
 }
